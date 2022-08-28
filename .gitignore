@@ -3,4 +3,5 @@
 /node_modules
 index.html
 script.js
-
+/.vscode
+/.DS_Store
