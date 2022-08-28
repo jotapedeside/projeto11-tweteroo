@@ -27,29 +27,6 @@ app.post('/sign-up', (req, res) => {
 });
 
 app.post('/tweets', (req, res) => {
-
-  /*const profPic = users.find(e => e.username === req.body.username).avatar;
-  const avatar = profPic ? profPic : "";
-  tweets.push(newTweet);
-  res.send(newTweet);
-  const user = req.headers.user;
-  const profPic = users.find(u => u.username === user);
-  console.log("link da prof pic", profPic);
-  console.log("find res", users.find(u => u.username === user));
-  console.log("find res2", users.find(u => u.username === user).avatar);
-  const avatar = profPic ? profPic.avatar : "oi";
-
-  
-  if (req.body.tweet.length !== 0 || profPic !== 0) {
-    const newTweet = {
-      ...req.body,
-      asd,
-    }
-    tweets.push(newTweet)
-    res.send(newTweet)
-  } else {
-    res.sendStatus(400).json({status: 400, message: "Todos os campos são obrigatórios"});
-  }*/
   const profPic = users.find(user => user.username === req.body.username)
   
   if (req.body.tweet.length !== 0 || profPic !== 0) {
@@ -62,8 +39,6 @@ app.post('/tweets', (req, res) => {
   } else {
     res.sendStatus(400).json({status: 400, message: "Todos os campos são obrigatórios"});
   }
-
-
 });
 
 app.get('/tweets', (req, res) => {
